@@ -18,7 +18,11 @@ public class TarefaController {
 
     @GetMapping("/version")
     public String getVersion() {
+<<<<<<< HEAD
         return "v1.1.0";
+=======
+        return "v1.0.0";
+>>>>>>> d92058401e4753bf23c36f30af1b3970c7b7c289
     }
 
     @GetMapping

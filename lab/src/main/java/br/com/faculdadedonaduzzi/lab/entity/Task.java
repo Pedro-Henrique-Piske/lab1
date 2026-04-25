@@ -16,5 +16,9 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
+<<<<<<< HEAD
 
+=======
+    private String prazo;
+>>>>>>> d92058401e4753bf23c36f30af1b3970c7b7c289
 }
