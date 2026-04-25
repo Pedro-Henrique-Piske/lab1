@@ -31,14 +31,11 @@
 	</properties>
 	<dependencies>
 		<dependency>
-<<<<<<< HEAD
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-=======
->>>>>>> d92058401e4753bf23c36f30af1b3970c7b7c289
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-h2console</artifactId>
 		</dependency>
