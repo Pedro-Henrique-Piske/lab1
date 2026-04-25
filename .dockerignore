@@ -1,4 +1,4 @@
-target/
+lab/target/
 .git/
 .gitignore
 *.log
