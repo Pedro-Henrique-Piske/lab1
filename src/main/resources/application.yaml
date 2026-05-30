@@ -8,6 +8,8 @@ spring:
 
 management:
   endpoints:
+    health:
+      show-details: always
     web:
       exposure:
-        include: "health,info"
+        include: "health,info,metrics"

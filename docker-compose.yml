@@ -12,7 +12,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   kanban-api:
-    build: lab
+    build: .
     container_name: kanban-backend
     ports:
       - "8080:8080"
@@ -21,6 +21,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=admin
       - SPRING_DATASOURCE_PASSWORD=admin_password
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES-HIBERNATE-DIALECT=ORG-HIBERNATE-DIALECT-POSTGRESQLDIALECT
     depends_on:
       - postgres-db
 
