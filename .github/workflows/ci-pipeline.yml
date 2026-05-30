@@ -1,5 +1,5 @@
-name: Ci
-
+name: CI - Validação de Código e Testes
+# 1. Os Gatilhos do Git Flow
 on:
   push:
     branches:
@@ -16,22 +16,21 @@ jobs:
 
     steps:
       - name: Clonar o Repositório
-        uses: action/ckeckout@v4
+        uses: actions/checkout@v4
 
       - name: Configurar o Java 21
-        uses: action/setup-java@v4
+        uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
 
+      # O passo mais importante: A garantia de qualidade!
       - name: Executar Testes Unitários
         run: mvn clean test
 
+      # Só chega aqui se os testes passarem
       - name: Garantir que compila (Build)
-        run: mvn clean package -DskipTests
-
-      - name: Compilar Código
         run: mvn clean package -DskipTests
 
       - name: Scan de Segurança no Código e Dependências (SCA)
